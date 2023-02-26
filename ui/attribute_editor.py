@@ -63,8 +63,8 @@ class AttributeEditor(tk.LabelFrame):
             for current_attribute in attributes:
                 attribute_frame = tk.Frame(attribute_labelframe)
                 attribute_frame.rowconfigure(0, weight=1)
-                attribute_frame.columnconfigure(0, weight=2, uniform="x")
-                attribute_frame.columnconfigure(1, weight=3, uniform="x")
+                attribute_frame.columnconfigure(0, weight=1, uniform="x")
+                attribute_frame.columnconfigure(1, weight=1, uniform="x")
                 attribute_frame.pack(side=tk.TOP, fill=tk.X)
 
                 attribute_name_label = tk.Label(attribute_frame, text=(current_attribute + ':'))
@@ -92,18 +92,22 @@ class AttributeEditor(tk.LabelFrame):
         if attribute_type == 'constant':
             var = tk.StringVar(frame, value=str(attribute_data['value']))
             new_obj = tk.Label(frame, text=str(attribute_data['value']))
-        if attribute_type == 'integer':
+        elif attribute_type == 'integer':
             var = tk.IntVar(frame, value=int(attribute_data['value']))
             new_obj = tk.Entry(frame, textvariable=var)
-        if attribute_type == 'string':
+        elif attribute_type == 'string':
             var = tk.StringVar(frame, value=attribute_data['value'])
             new_obj = tk.Entry(frame, textvariable=var)
-        if attribute_type == 'boolean':
+        elif attribute_type == 'boolean':
             var = tk.IntVar(frame, value=int(attribute_data['value']))
             new_obj = tk.Checkbutton(frame, variable=var)
-        if attribute_type == 'select':
+        elif attribute_type == 'select':
             var = tk.StringVar(frame, value=attribute_data['value'])
             new_obj = tk.OptionMenu(frame, var, *attribute_data['options'])
+        elif attribute_type == 'int_array':
+            var = tk.StringVar(frame, value=attribute_data['value'])
+            new_obj = tk.Entry(frame, textvariable=var)
+
         return new_obj, var
 
     def get_selected_object_attributes(self):

@@ -1,6 +1,8 @@
 import tkinter as tk
 import tkinter.ttk as ttk
 
+from app.objects_data import *
+
 class DevelopmentCanvas(tk.LabelFrame):
 
     app = None
@@ -96,6 +98,9 @@ class DevelopmentCanvas(tk.LabelFrame):
         
         elif 'Scrollbar' == node.node_type:
             new_obj = self.draw_scrollbar(node, node_attributes_list, parent_obj, parent_attributes_list)
+
+        elif 'Text' == node.node_type:
+            new_obj = self.draw_text(node, node_attributes_list, parent_obj, parent_attributes_list)
         
         elif 'Spinbox' == node.node_type:
             new_obj = self.draw_spinbox(node, node_attributes_list, parent_obj, parent_attributes_list)
@@ -117,26 +122,36 @@ class DevelopmentCanvas(tk.LabelFrame):
 
         elif 'Treeview' == node.node_type:
             new_obj = self.draw_treeview(node, node_attributes_list, parent_obj, parent_attributes_list)
+
+        if node.is_container():
+            if node_attributes_list[ATTR_INDEX_LAYOUT]['parameters']['type']['value'] == 'grid':
+                # column
+                column_weights_str_list = node_attributes_list[ATTR_INDEX_LAYOUT]['parameters']['cweights']['value'].split(',')
+                column_weights_list = [int(x) for x in  column_weights_str_list]
+                for index, val in enumerate(column_weights_list):
+                    new_obj.columnconfigure(index, weight=val, uniform='x')
+                # row
+                row_weights_str_list = node_attributes_list[ATTR_INDEX_LAYOUT]['parameters']['rweights']['value'].split(',')
+                row_weights_list = [int(x) for x in row_weights_str_list]
+                for index, val in enumerate(row_weights_list):
+                    new_obj.rowconfigure(index, weight=val, uniform='x')
+        
+        padx_val = int(node_attributes_list[ATTR_INDEX_PLACE]['parameters']['padx']['value'])
+        pady_val = int(node_attributes_list[ATTR_INDEX_PLACE]['parameters']['pady']['value'])
+        ipadx_val = int(node_attributes_list[ATTR_INDEX_PLACE]['parameters']['ipadx']['value'])
+        ipady_val = int(node_attributes_list[ATTR_INDEX_PLACE]['parameters']['ipady']['value'])
         
         if parent_attributes_list is not None:
-            if 'grid' == parent_attributes_list[4]['parameters']['type']['value']:
-                row_val = int(node_attributes_list[1]['parameters']['row']['value'])
-                column_val = int(node_attributes_list[1]['parameters']['column']['value'])
-                sticky_val = node_attributes_list[1]['parameters']['sticky']['value']
-                padx_val = int(node_attributes_list[1]['parameters']['padx']['value'])
-                pady_val = int(node_attributes_list[1]['parameters']['pady']['value'])
-                ipadx_val = int(node_attributes_list[1]['parameters']['ipadx']['value'])
-                ipady_val = int(node_attributes_list[1]['parameters']['ipady']['value'])
+            if 'grid' == parent_attributes_list[ATTR_INDEX_LAYOUT]['parameters']['type']['value']:
+                row_val = int(node_attributes_list[ATTR_INDEX_GRID]['parameters']['row']['value'])
+                column_val = int(node_attributes_list[ATTR_INDEX_GRID]['parameters']['column']['value'])
+                sticky_val = node_attributes_list[ATTR_INDEX_GRID]['parameters']['sticky']['value']
 
                 new_obj.grid(row=row_val, column=column_val, sticky=sticky_val, padx=padx_val, pady=pady_val, ipadx=ipadx_val, ipady=ipady_val)
             else:
-                side_val = node_attributes_list[2]['parameters']['side']['value']
-                fill_val = node_attributes_list[2]['parameters']['fill']['value']
-                expand_val = int(node_attributes_list[2]['parameters']['expand']['value'])
-                padx_val = int(node_attributes_list[2]['parameters']['padx']['value'])
-                pady_val = int(node_attributes_list[2]['parameters']['pady']['value'])
-                ipadx_val = int(node_attributes_list[2]['parameters']['ipadx']['value'])
-                ipady_val = int(node_attributes_list[2]['parameters']['ipady']['value'])
+                side_val = node_attributes_list[ATTR_INDEX_PACK]['parameters']['side']['value']
+                fill_val = node_attributes_list[ATTR_INDEX_PACK]['parameters']['fill']['value']
+                expand_val = int(node_attributes_list[ATTR_INDEX_PACK]['parameters']['expand']['value'])
 
                 new_obj.pack(side=side_val, fill=fill_val, expand=expand_val, padx=padx_val, pady=pady_val, ipadx=ipadx_val, ipady=ipady_val)
         else:
@@ -156,27 +171,27 @@ class DevelopmentCanvas(tk.LabelFrame):
         return new_obj
 
     def draw_labelframe(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        text_val = node_attributes_list[3]['parameters']['text']['value']
+        text_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['text']['value']
         new_obj = tk.LabelFrame(parent_obj, text=text_val)
         return new_obj
 
     def draw_button(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        text_val = node_attributes_list[3]['parameters']['text']['value']
+        text_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['text']['value']
         new_obj = tk.Button(parent_obj, text=text_val)
         return new_obj
 
     def draw_checkbutton(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        text_val = node_attributes_list[3]['parameters']['text']['value']
+        text_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['text']['value']
         new_obj = tk.Checkbutton(parent_obj, text=text_val)
         return new_obj
 
     def draw_entry(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        show_val = node_attributes_list[3]['parameters']['show']['value']
+        show_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['show']['value']
         new_obj = tk.Entry(parent_obj, show=show_val)
         return new_obj
 
     def draw_label(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        text_val = node_attributes_list[3]['parameters']['text']['value']
+        text_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['text']['value']
         new_obj = tk.Label(parent_obj, text=text_val)
         return new_obj
 
@@ -185,7 +200,7 @@ class DevelopmentCanvas(tk.LabelFrame):
         return new_obj
 
     def draw_radiobutton(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        text_val = node_attributes_list[3]['parameters']['text']['value']
+        text_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['text']['value']
         new_obj = tk.Radiobutton(parent_obj, text=text_val)
         return new_obj
 
