@@ -44,7 +44,7 @@ class Application(tk.Tk):
 
     def init_ui(self):
         self.last_configure_time = time.time()
-        self.title('TKGen')
+        self.title('TKGenerator')
         self.columnconfigure(0, weight=1)
         self.rowconfigure(0, weight=1)
 
@@ -54,10 +54,10 @@ class Application(tk.Tk):
         self.main_frame = tk.Frame(self)
         self.main_frame.grid(row=0, column=0, sticky='news')
         self.main_frame.rowconfigure(0, weight=1)
-        self.main_frame.columnconfigure(0, weight=2, uniform="x")
-        self.main_frame.columnconfigure(1, weight=3, uniform="x")
-        self.main_frame.columnconfigure(2, weight=12, uniform="x")
-        self.main_frame.columnconfigure(3, weight=4, uniform="x")
+        self.main_frame.columnconfigure(0, weight=3, uniform="x")
+        self.main_frame.columnconfigure(1, weight=5, uniform="x")
+        self.main_frame.columnconfigure(2, weight=24, uniform="x")
+        self.main_frame.columnconfigure(3, weight=5, uniform="x")
 
         # console
         self.console = ui.SingleLineConsole(self)
