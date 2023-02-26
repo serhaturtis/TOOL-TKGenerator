@@ -2,6 +2,7 @@ import random
 import json
 import copy
 
+from app.objects_data import *
 from app.ui_node import UINode
 
 class UITree:
@@ -17,8 +18,8 @@ class UITree:
         
     def add_master_frame(self):
         attributes_list = copy.deepcopy(self.app.get_object_attributes_list('Frame'))
-        attributes_list[0]['parameters']['uid']['value'] = '0'
-        attributes_list[0]['parameters']['name']['value'] = 'object_' + '0'
+        attributes_list[ATTR_INDEX_OBJECT]['parameters']['uid']['value'] = '0'
+        attributes_list[ATTR_INDEX_OBJECT]['parameters']['name']['value'] = 'object_' + '0'
         children_list = []
         self.master_container = UINode('Frame', '0', None, children_list, attributes_list, self.app)
         self.nodes['0'] = self.master_container
@@ -30,11 +31,11 @@ class UITree:
             uid = self.generate_uid()
 
             attributes_list = copy.deepcopy(self.app.get_object_attributes_list(node_type))
-            attributes_list[0]['parameters']['uid']['value'] = uid
-            attributes_list[0]['parameters']['name']['value'] = 'object_' + uid
+            attributes_list[ATTR_INDEX_OBJECT]['parameters']['uid']['value'] = uid
+            attributes_list[ATTR_INDEX_OBJECT]['parameters']['name']['value'] = 'object_' + uid
 
             # check layout parameters
-            if 'grid' == parent_node.get_attributes_list()[4]['parameters']['type']['value']:
+            if 'grid' == parent_node.get_attributes_list()[ATTR_INDEX_LAYOUT]['parameters']['type']['value']:
                 print('Parent is grid.')
             else:
                 print('Parent is pack.')

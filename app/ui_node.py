@@ -1,5 +1,7 @@
 import copy
 
+from app.objects_data import *
+
 class UINode:
     
     def __init__(self, node_type, uid, parent_uid=None, children_list=[], attributes_list=None, app=None):
@@ -40,7 +42,7 @@ class UINode:
         self.attributes_list = copy.deepcopy(attributes_list)
         
     def get_node_name(self):
-        return self.attributes_list[0]['parameters']['name']['value']
+        return self.attributes_list[ATTR_INDEX_OBJECT]['parameters']['name']['value']
 
     def get_node_lib_type(self):
         return self.app.get_objects_data()[self.node_type]['lib']

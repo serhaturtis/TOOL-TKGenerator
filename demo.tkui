@@ -1,0 +1,1350 @@
+{
+    "0": {
+        "node_type": "Frame",
+        "parent_uid": null,
+        "children_list": [
+            "1",
+            "2",
+            "3"
+        ],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_0"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Frame",
+                "parameters": {}
+            },
+            {
+                "attribute_class_name": "Layout Manager",
+                "parameters": {
+                    "type": {
+                        "type": "select",
+                        "options": [
+                            "pack",
+                            "grid"
+                        ],
+                        "value": "grid"
+                    },
+                    "rweights": {
+                        "type": "int_array",
+                        "value": "1"
+                    },
+                    "cweights": {
+                        "type": "int_array",
+                        "value": "1,8,1"
+                    }
+                }
+            }
+        ]
+    },
+    "1": {
+        "node_type": "LabelFrame",
+        "parent_uid": "0",
+        "children_list": [
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_1"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "1"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "LabelFrame",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "LabelFrame"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Layout Manager",
+                "parameters": {
+                    "type": {
+                        "type": "select",
+                        "options": [
+                            "pack",
+                            "grid"
+                        ],
+                        "value": "grid"
+                    },
+                    "rweights": {
+                        "type": "int_array",
+                        "value": "1,1,1,1,1"
+                    },
+                    "cweights": {
+                        "type": "int_array",
+                        "value": "1"
+                    }
+                }
+            }
+        ]
+    },
+    "2": {
+        "node_type": "LabelFrame",
+        "parent_uid": "0",
+        "children_list": [
+            "9",
+            "10",
+            "11"
+        ],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_2"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "2"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "1"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "LabelFrame",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "LabelFrame"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Layout Manager",
+                "parameters": {
+                    "type": {
+                        "type": "select",
+                        "options": [
+                            "pack",
+                            "grid"
+                        ],
+                        "value": "grid"
+                    },
+                    "rweights": {
+                        "type": "int_array",
+                        "value": "1"
+                    },
+                    "cweights": {
+                        "type": "int_array",
+                        "value": "1,1,1"
+                    }
+                }
+            }
+        ]
+    },
+    "3": {
+        "node_type": "LabelFrame",
+        "parent_uid": "0",
+        "children_list": [
+            "12"
+        ],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_3"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "3"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "2"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "LabelFrame",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "LabelFrame"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Layout Manager",
+                "parameters": {
+                    "type": {
+                        "type": "select",
+                        "options": [
+                            "pack",
+                            "grid"
+                        ],
+                        "value": "pack"
+                    },
+                    "rweights": {
+                        "type": "int_array",
+                        "value": "0,0"
+                    },
+                    "cweights": {
+                        "type": "int_array",
+                        "value": "0,0"
+                    }
+                }
+            }
+        ]
+    },
+    "4": {
+        "node_type": "Button",
+        "parent_uid": "1",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_4"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "4"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Button",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Button"
+                    },
+                    "command": {
+                        "type": "string",
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "5": {
+        "node_type": "Button",
+        "parent_uid": "1",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_5"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "1"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Button",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Button"
+                    },
+                    "command": {
+                        "type": "string",
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "6": {
+        "node_type": "Button",
+        "parent_uid": "1",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_6"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "6"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "2"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Button",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Button"
+                    },
+                    "command": {
+                        "type": "string",
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "7": {
+        "node_type": "Button",
+        "parent_uid": "1",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_7"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "7"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "3"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Button",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Button"
+                    },
+                    "command": {
+                        "type": "string",
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "8": {
+        "node_type": "Button",
+        "parent_uid": "1",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_8"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "8"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "4"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Button",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Button"
+                    },
+                    "command": {
+                        "type": "string",
+                        "value": ""
+                    }
+                }
+            }
+        ]
+    },
+    "9": {
+        "node_type": "Listbox",
+        "parent_uid": "2",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_9"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "9"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Listbox",
+                "parameters": {}
+            }
+        ]
+    },
+    "10": {
+        "node_type": "Treeview",
+        "parent_uid": "2",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_10"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "10"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "1"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Treeview",
+                "parameters": {}
+            }
+        ]
+    },
+    "11": {
+        "node_type": "Text",
+        "parent_uid": "2",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_11"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "11"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "2"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "0"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Text",
+                "parameters": {}
+            }
+        ]
+    },
+    "12": {
+        "node_type": "Label",
+        "parent_uid": "3",
+        "children_list": [],
+        "attributes_list": [
+            {
+                "attribute_class_name": "Object",
+                "parameters": {
+                    "name": {
+                        "type": "string",
+                        "value": "object_12"
+                    },
+                    "uid": {
+                        "type": "constant",
+                        "value": "12"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Placement",
+                "parameters": {
+                    "padx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "pady": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipadx": {
+                        "type": "integer",
+                        "value": "5"
+                    },
+                    "ipady": {
+                        "type": "integer",
+                        "value": "5"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Grid",
+                "parameters": {
+                    "row": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "column": {
+                        "type": "integer",
+                        "value": "0"
+                    },
+                    "sticky": {
+                        "type": "string",
+                        "value": "nsew"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Pack",
+                "parameters": {
+                    "side": {
+                        "type": "select",
+                        "options": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom"
+                        ],
+                        "value": "left"
+                    },
+                    "fill": {
+                        "type": "select",
+                        "options": [
+                            "none",
+                            "x",
+                            "y",
+                            "both"
+                        ],
+                        "value": "both"
+                    },
+                    "expand": {
+                        "type": "boolean",
+                        "value": "1"
+                    }
+                }
+            },
+            {
+                "attribute_class_name": "Label",
+                "parameters": {
+                    "text": {
+                        "type": "string",
+                        "value": "Label"
+                    }
+                }
+            }
+        ]
+    }
+}
