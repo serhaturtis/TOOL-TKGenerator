@@ -130,7 +130,7 @@ class UIClassGenerator:
 
     def generate_callback_methods(self, uid, node):
         widget_attributes_list = node.get_attributes_list()
-        for key_name, key_value in widget_attributes_list[3]['parameters'].items():
+        for key_name, key_value in widget_attributes_list[ATTR_INDEX_SPEC]['parameters'].items():
             if key_name in self.callback_attributes and key_value['value'] != "":
                 self.codegen.line('def {callback_fname}(self):'.format(callback_fname=key_value['value']))
                 self.codegen.indent()
