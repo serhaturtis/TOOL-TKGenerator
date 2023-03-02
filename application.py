@@ -1,5 +1,6 @@
 import tkinter as tk
 import tkinter.filedialog as fd
+import tkinter.messagebox as mb
 import time
 import os
 
@@ -38,9 +39,11 @@ class Application(tk.Tk):
 
     def init_logic(self):
         self.current_ui_tree = UITree(self)
+        self.bind('<Control-n>', self.on_new_ui)
         self.bind('<Control-s>', self.on_save_ui)
         self.bind('<Control-l>', self.on_load_ui)
         self.bind('<Control-g>', self.on_generate_code)
+        self.bind('<Control-q>', self.on_exit)
 
     def init_ui(self):
         self.last_configure_time = time.time()
@@ -134,6 +137,17 @@ class Application(tk.Tk):
 
     def get_current_ui_tree(self):
         return self.current_ui_tree.get_all_nodes()
+
+    def on_exit(self, event):
+        result = mb.askyesno('Exit', 'Do you want to exit?')
+        if result:
+            self.quit()
+
+    def on_new_ui(self, event):
+        result = mb.askyesno('New', 'Do you want to open a new UI?')
+        if result:
+            self.current_ui_tree = UITree(self)
+            self.ui_updated()
     
     def on_save_ui(self, event):
         file = fd.asksaveasfile(title='Save UI as', mode='w', initialfile = 'Untitled.tkui', defaultextension=".tkui", filetypes=[('TKGen File','*.tkui')])
