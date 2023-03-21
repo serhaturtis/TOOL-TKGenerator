@@ -205,7 +205,8 @@ class DevelopmentCanvas(tk.LabelFrame):
         return new_obj
 
     def draw_scrollbar(self, node, node_attributes_list, parent_obj, parent_attributes_list):
-        new_obj = tk.Scrollbar(parent_obj)
+        orient_val = node_attributes_list[ATTR_INDEX_SPEC]['parameters']['orient']['value']
+        new_obj = tk.Scrollbar(parent_obj, orient=orient_val)
         return new_obj
 
     def draw_spinbox(self, node, node_attributes_list, parent_obj, parent_attributes_list):

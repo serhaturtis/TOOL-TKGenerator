@@ -191,7 +191,11 @@ RADIOBUTTON_ATTRIBUTES = {
 SCROLLBAR_ATTRIBUTES = {
 	"attribute_class_name": "Scrollbar",
 	"parameters": {
-
+		"orient": {
+			"type": "select",
+			"options": ["vertical", "horizontal"],
+			"value": "vertical"
+		}
 	}
 }
 
