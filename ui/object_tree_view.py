@@ -21,11 +21,16 @@ class ObjectTreeView(tk.LabelFrame):
         self.tree = ttk.Treeview(self)
         self.tree.grid(row=0, column=0, sticky='news')
         
-        self.scrollbar = tk.Scrollbar(self)
-        self.scrollbar.grid(row=0, column=1, sticky='news')
+        self.vscrollbar = tk.Scrollbar(self)
+        self.vscrollbar.grid(row=0, column=1, sticky='news')
+
+        self.hscrollbar = tk.Scrollbar(self, orient=tk.HORIZONTAL)
+        self.hscrollbar.grid(row=1, column=0, columnspan=2, sticky='news')
         
-        self.tree.config(yscrollcommand=self.scrollbar.set)
-        self.scrollbar.config(command=self.tree.yview)
+        self.tree.config(yscrollcommand=self.vscrollbar.set)
+        self.tree.config(xscrollcommand=self.hscrollbar.set)
+        self.vscrollbar.config(command=self.tree.yview)
+        self.hscrollbar.config(command=self.tree.xview)
 
     def init_logic(self):
         self.tree.bind('<<TreeviewSelect>>', self.on_tree_select)
@@ -44,7 +49,7 @@ class ObjectTreeView(tk.LabelFrame):
         item_counter = 0
         container_iid = 0
         for uid in container_list:
-            container_string = '#' + uid + ': ' + current_ui_tree[uid].get_node_type()
+            container_string = '#' + uid + ': ' + current_ui_tree[uid].get_node_type() + '.' + current_ui_tree[uid].get_node_name()
             self.tree.insert('', tk.END, text=container_string, iid=item_counter, open=True)
             container_iid = item_counter
 
@@ -54,7 +59,7 @@ class ObjectTreeView(tk.LabelFrame):
             children_list = current_ui_tree[uid].get_children()
             child_index = 0
             for child_uid in children_list:
-                child_string = '#' + child_uid + ': ' + current_ui_tree[child_uid].get_node_type()
+                child_string = '#' + child_uid + ': ' + current_ui_tree[child_uid].get_node_type() + '.' + current_ui_tree[child_uid].get_node_name()
                 self.tree.insert('', tk.END, text=child_string, iid=item_counter, open=False)
                 self.tree.move(item_counter, container_iid, child_index)
                 
