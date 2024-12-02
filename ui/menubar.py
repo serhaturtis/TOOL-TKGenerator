@@ -12,12 +12,17 @@ class Menubar(tk.Menu):
         
     def init_ui(self):
         filemenu = tk.Menu(self, tearoff=0)
-        filemenu.add_command(label="New", command=self.new_callback)
-        filemenu.add_command(label="Load", command=self.load_callback)
-        filemenu.add_command(label="Save", command=self.save_callback)
+        filemenu.add_command(label="New", command=self.new_callback, accelerator="Ctrl+N")
+        filemenu.add_command(label="Load", command=self.load_callback, accelerator="Ctrl+L")
+        filemenu.add_command(label="Save", command=self.save_callback, accelerator="Ctrl+S")
         filemenu.add_separator()
-        filemenu.add_command(label="Exit", command=self.exit_callback)
+        filemenu.add_command(label="Exit", command=self.exit_callback, accelerator="Ctrl+Q")
         self.add_cascade(label="File", menu=filemenu)
+
+        editmenu = tk.Menu(self, tearoff=0)
+        editmenu.add_command(label="Undo", command=self.undo_callback, accelerator="Ctrl+Z")
+        editmenu.add_command(label="Redo", command=self.redo_callback, accelerator="Ctrl+Y")
+        self.add_cascade(label="Edit", menu=editmenu)
 
         helpmenu = tk.Menu(self, tearoff=0)
         helpmenu.add_command(label="Help Index", command=self.help_callback)
@@ -42,3 +47,8 @@ class Menubar(tk.Menu):
     def about_callback(self):
         return
         
+    def undo_callback(self):
+        self.app.on_undo(None)
+        
+    def redo_callback(self):
+        self.app.on_redo(None)
